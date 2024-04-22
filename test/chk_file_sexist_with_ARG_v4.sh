@@ -14,9 +14,11 @@ fi
 chk_args () {
 if [ "$fl" == "" ];
 then
+	clear
 	echo "Input some args please ... " && sleep 3
 	exit
 else
+	clear
 	check_file $fl
 fi
 }
