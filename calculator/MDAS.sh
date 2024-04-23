@@ -5,24 +5,28 @@ optr=$choice
 	case $optr in
 		"1")
 			echo "Multiplication"
-			sleep 2
-			closeMe
+			getthenumbers
+			total=$(($fn * $sn))
+			echo "the product of $fn and $sn is $total"
 			;;
 		"2")
 			echo "Division"
-			sleep 2
-			closeMe
+			getthenumbers
+			total=$(($fn / $sn))
+			echo "the quotient of $fn and $sn is $total"
 			;;
 		"3")
 			echo "Addition"
-			sleep 2
-			closeMe
+			getthenumbers
+			total=$(($fn + $sn))
+			echo "the sum of $fn and $sn is $total"
 			;;
 
 		"4")
 			echo "Subtraction"
-			sleep 2
-			closeMe
+			getthenumbers
+			total=$(($fn - $sn))
+			echo "the sum of $fn and $sn is $total"
 			;;
 
 		*)
@@ -31,6 +35,12 @@ optr=$choice
 			closeMe	
 			;;
 	esac
+}
+
+getthenumbers () {
+clear
+read -p "Enter first number : " fn
+read -p "Enter second number : " sn
 }
 
 closeMe () {
