@@ -2,6 +2,6 @@
 fl=stop
 while [ -f stop ];
 do
-echo "stop exist ..."
+echo "The `pwd`/stop file exist ..."
 sleep 1
 done
