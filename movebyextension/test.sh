@@ -1,23 +1,68 @@
-i#!/bin/sh
+#!/bin/sh
 clear
-for fls in txt1.txt txt1.scr txt1.sql txt2.sql
+currentdatetime=$(date +%Y%m%d%H%M)
+deployCDT_lst="deploy"$currentdatetime".lst"
+deployCDT_err="deploy"$currentdatetime".err"
+
+ls deploy | tr " " "\n" >deployCDT_lst
+
+#list files for deployment
+echo "list files for deployment"
+ls -lt deploy/
+
+bkp_fls_4_dplymnt () {
+echo "list backup files for deployment"
+for fls in `cat deployCDT_lst`
 do
-echo $fls
 subfls=${fls: -3}
-echo $subfls
 	case $subfls in
 		txt)
-			echo "the file is TXT file"
+			if [ -f /tmp/data/$subfls/$fls ]
+			then
+				cp -ip deploy/$fls /tmp/data/$subfls/$fls_`date +%Y%m%d`bkp
+				ls -lt /tmp/data/$subfls/$fls /tmp/data/$subfls/$fls_`date +%Y%m%d`bkp
+			else
+				echo "/tmp/data/$subfls/$fls doesn't exist. backup is N/A."
+			fi
 			;;
 		scr)
-			echo "the file is SCR file"
+			if [ -f /tmp/data/$subfls/$fls ]
+			then
+				cp -ip deploy/$fls /tmp/data/$subfls/$fls_`date +%Y%m%d`bkp
+				ls -lt /tmp/data/$subfls/$fls /tmp/data/$subfls/$fls_`date +%Y%m%d`bkp
+			else
+				echo "/tmp/data/$subfls/$fls doesn't exist. backup is N/A."
+			fi
 			;;
 		sql)
-			echo "the file is SQL file"
+			if [ -f /tmp/data/$subfls/$fls ]
+			then
+				cp -ip deploy/$fls /tmp/data/$subfls/$fls_`date +%Y%m%d`bkp
+				ls -lt /tmp/data/$subfls/$fls /tmp/data/$subfls/$fls_`date +%Y%m%d`bkp
+			else
+				echo "/tmp/data/$subfls/$fls doesn't exist. backup is N/A."
+			fi
 			;;
 		*)
-			echo "$fls" >>deploy_`date +%Y%m%d`.err
+			echo "$fls" >>$deployCDT_err
 			;;
 	esac
 done
+}
+
+read -p "\nProceed to backup? [y/Y] : " proCd
+
+if [ "$proCd" = "Y" ] || [ "$proCd" = "y" ]
+then
+	clear
+	bkp_fls_4_dplymnt
+else
+	echo "Exit in 3 seconds ..."
+	sleep 3
+	exit 0;
+fi
+
+
+
+
 

@@ -1,0 +1,52 @@
+#!/bin/sh
+clear
+>deploy_$(date +%Y%m%d).lst
+#echo "txt1.txt txt1.scr txt1.sql txt2.sql" | tr " " "\n" >deploy_$(date +%Y%m%d).lst
+ls deploy | tr " " "\n" >deploy_$(date +%Y%m%d).lst
+
+#list files for deployment
+echo "list files for deployment"
+ls -lt deploy/
+
+bkp_fls_4_dplymnt () {
+for fls in `cat deploy_$(date +%Y%m%d).lst`
+do
+echo $fls
+subfls=${fls: -3}
+echo $subfls
+	case $subfls in
+		txt)
+			cp -ip deploy/$fls /tmp/data/$subfls/$fls_`date +%Y%m%d`bkp
+			ls -lt /tmp/data/$subfls/$fls /tmp/data/$subfls/$fls_`date +%Y%m%d`bkp 
+			;;
+		scr)
+			cp -ip deploy/$fls /tmp/data/$subfls/$fls_`date +%Y%m%d`bkp
+			ls -lt /tmp/data/$subfls/$fls /tmp/data/$subfls/$fls_`date +%Y%m%d`bkp 
+			;;
+		sql)
+			cp -ip /tmp/data/$subfls/$fls /tmp/data/$subfls/$fls_`date +%Y%m%d`bkp
+			ls -lt /tmp/data/$subfls/$fls /tmp/data/$subfls/$fls_`date +%Y%m%d`bkp 
+			;;
+		*)
+			echo "$fls" >>deploy_`date +%Y%m%d`.err
+			;;
+	esac
+done
+}
+
+read -p "\nProceed to backup? [y/Y] : " proCd
+
+if [ "$proCd" = "Y" ] || [ "$proCd" = "y" ]
+then
+	clear
+	bkp_fls_4_dplymnt
+else
+	echo "Exit in 3 seconds ..."
+	sleep 3
+	exit 0;
+fi
+
+
+
+
+
