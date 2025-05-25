@@ -1,0 +1,166 @@
+2025-05-25 20:04:01 : Start Executing Ping
+		PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+		64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=52.1 ms
+		64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=15.4 ms
+		64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=48.5 ms
+		64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=41.8 ms
+		
+		--- 8.8.8.8 ping statistics ---
+		4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+		rtt min/avg/max/mdev = 15.373/39.461/52.104/14.389 ms
+2025-05-25 20:04:01 : Finish Executing Ping
+2025-05-25 20:05:36 : Start Executing Ping
+                      PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+                      64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=26.0 ms
+                      64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=13.4 ms
+                      64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=35.7 ms
+                      64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=59.9 ms
+                      
+                      --- 8.8.8.8 ping statistics ---
+                      4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+                      rtt min/avg/max/mdev = 13.366/33.752/59.915/17.056 ms
+2025-05-25 20:05:36 : Finish Executing Ping
+2025-05-25 20:05:56 : Start Executing Ping
+                      PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+                      64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=21.4 ms
+                      64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=23.4 ms
+                      64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=42.4 ms
+                      64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=17.0 ms
+                      
+                      --- 8.8.8.8 ping statistics ---
+                      4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+                      rtt min/avg/max/mdev = 16.987/26.045/42.397/9.721 ms
+2025-05-25 20:05:56 : Finish Executing Ping
+2025-05-25 20:06:05 : Start Executing Ping
+                      PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+                      64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=17.5 ms
+                      64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=197 ms
+                      64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=24.2 ms
+                      64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=28.3 ms
+                      
+                      --- 8.8.8.8 ping statistics ---
+                      4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+                      rtt min/avg/max/mdev = 17.459/66.653/196.689/75.175 ms
+2025-05-25 20:06:05 : Finish Executing Ping
+2025-05-25 20:06:50 : Start Executing Ping
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=24.4 ms64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=24.4 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=19.1 ms64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=19.1 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=15.6 ms64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=15.6 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=15.2 ms64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=15.2 ms
+
+--- 8.8.8.8 ping statistics ------ 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3007ms4 packets transmitted, 4 received, 0% packet loss, time 3007ms
+rtt min/avg/max/mdev = 15.159/18.572/24.438/3.715 msrtt min/avg/max/mdev = 15.159/18.572/24.438/3.715 ms
+2025-05-25 20:06:50 : Finish Executing Ping
+2025-05-25 20:07:25 : Start Executing Ping
+$LOGPREFIXPING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+$LOGPREFIX64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=21.7 ms
+$LOGPREFIX64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=22.2 ms
+$LOGPREFIX64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=28.5 ms
+$LOGPREFIX64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=33.5 ms
+$LOGPREFIX
+$LOGPREFIX--- 8.8.8.8 ping statistics ---
+$LOGPREFIX4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+$LOGPREFIXrtt min/avg/max/mdev = 21.731/26.481/33.513/4.851 ms
+2025-05-25 20:07:25 : Finish Executing Ping
+2025-05-25 20:08:14 : Start Executing Ping
+                      PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+                      64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=15.9 ms
+                      64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=27.0 ms
+                      64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=17.9 ms
+                      64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=36.6 ms
+                      
+                      --- 8.8.8.8 ping statistics ---
+                      4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+                      rtt min/avg/max/mdev = 15.924/24.362/36.635/8.217 ms
+2025-05-25 20:08:14 : Finish Executing Ping
+2025-05-25 21:04:03 : Start Executing Ping
+                      PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+                      64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=22.5 ms
+                      64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=23.9 ms
+                      64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=16.4 ms
+                      64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=13.5 ms
+                      
+                      --- 8.8.8.8 ping statistics ---
+                      4 packets transmitted, 4 received, 0% packet loss, time 3008ms
+                      rtt min/avg/max/mdev = 13.470/19.076/23.907/4.288 ms
+2025-05-25 21:04:03 : Finish Executing Ping
+2025-05-25 21:59:08 : Start Executing Ping
+                      PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+                      64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=43.2 ms
+                      64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=18.5 ms
+                      64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=10.7 ms
+                      64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=37.3 ms
+                      
+                      --- 8.8.8.8 ping statistics ---
+                      4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+                      rtt min/avg/max/mdev = 10.702/27.425/43.195/13.280 ms
+2025-05-25 21:59:08 : Finish Executing Ping
+2025-05-25 22:00:52 : Start Executing Ping
+                      PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+                      64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=12.7 ms
+                      64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=19.9 ms
+                      64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=54.3 ms
+                      64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=12.1 ms
+                      
+                      --- 8.8.8.8 ping statistics ---
+                      4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+                      rtt min/avg/max/mdev = 12.148/24.773/54.344/17.347 ms
+2025-05-25 22:00:52 : Finish Executing Ping
+2025-05-25 22:16:41 : Start Executing Ping
+2025-05-25 22:19:01 : Start Executing Ping
+2025-05-25 22:19:12 : Start Executing Ping
+2025-05-25 22:19:47 : Start Executing Ping
+                      PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+
+                      64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=14.1 ms
+
+                      64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=46.3 ms
+
+                      64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=46.2 ms
+
+                      64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=18.1 ms
+
+                      
+
+                      --- 8.8.8.8 ping statistics ---
+
+                      4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+
+                      rtt min/avg/max/mdev = 14.133/31.164/46.257/15.111 ms
+
+2025-05-25 22:19:47 : Finish Executing Ping
+2025-05-25 22:20:03 : Start Executing Ping
+                      PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+                      64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=20.5 ms
+                      64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=18.1 ms
+                      64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=12.1 ms
+                      64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=15.0 ms
+                      
+                      --- 8.8.8.8 ping statistics ---
+                      4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+                      rtt min/avg/max/mdev = 12.058/16.410/20.494/3.174 ms
+2025-05-25 22:20:03 : Finish Executing Ping
+2025-05-25 22:21:25 : Start Executing Ping
+                      PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+                      64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=23.0 ms
+                      64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=11.0 ms
+                      64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=20.5 ms
+                      64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=17.2 ms
+                      
+                      --- 8.8.8.8 ping statistics ---
+                      4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+                      rtt min/avg/max/mdev = 11.029/17.933/23.026/4.495 ms
+2025-05-25 22:21:25 : Finish Executing Ping
+2025-05-25 22:22:09 : Start Executing Ping
+                      PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+                      64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=12.7 ms
+                      64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=40.4 ms
+                      64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=13.3 ms
+                      64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=10.7 ms
+                      
+                      --- 8.8.8.8 ping statistics ---
+                      4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+                      rtt min/avg/max/mdev = 10.701/19.265/40.373/12.223 ms
+2025-05-25 22:22:09 : Finish Executing Ping

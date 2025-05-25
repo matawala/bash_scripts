@@ -1,0 +1,5 @@
+manny:1010:dba_admin,dba_managers,dba_staff
+moe:1011:dba_admin,dba_staff
+jack:1012:dba_intern,dba_staff
+marcia:1013:it_staff,it_managers
+jan:1014:dba_admin,dba_staff

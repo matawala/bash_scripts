@@ -1,0 +1,12 @@
+#!/bin/sh
+myarray=(bong rhea yuan yuri)
+for arr in "${myarray[@]}"
+do
+	echo $arr
+done
+
+echo "My 1st is ${myarray[0]}"
+echo "My 2nd is ${myarray[1]}"
+echo "My 3rd is ${myarray[2]}"
+echo "My 4th is ${myarray[3]}"
+

@@ -1,0 +1,4 @@
+/etc/hosts
+/tmp/hosts
+/etc/ssh/sshd_config
+/etc/hostname

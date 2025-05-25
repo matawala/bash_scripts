@@ -1,0 +1,100 @@
+#!/bin/bash
+
+############################################################################################
+#
+# [X] Added PROJECT_PATH to fix the issue in changing directory for server2 
+# [X] Check only the files successfully copied
+# [X] Add error trap on the case of connectivity in the 2 inputted source
+# [X] Add error trap if $LIST_OF_FILES is empty
+# [X] Make invisible the connectivity test
+# [X] Added message when a connectivity failed or passed
+# [X] List all invalid file entries
+#
+############################################################################################
+
+clear
+
+read -p "Enter Source1: " MYSRC1
+read -p "Enter Source2: " MYSRC2
+
+# Prechecks: Checking of the connectivity of the sources
+echo ""
+echo -e "=========================================="
+echo "Prechecks : Connectivity testing"
+echo -e "=========================================="
+ssh -q $MYSRC1 exit 0
+if [[ $? != 0 ]]; then echo -e "\e[31mfailure\e[0m: Connectivity test to $MYSRC1"; exit 1; else echo -e "\e[32mSuccessful\e[0m: Connectivity test to $MYSRC1"; fi
+ssh -q $MYSRC2 exit 0
+if [[ $? != 0 ]]; then echo -e "\e[31mfailure\e[0m: Connectivity test to $MYSRC2"; exit 1; else echo -e "\e[32mSuccessful\e[0m: Connectivity test to $MYSRC2"; fi
+
+VI_SLEEP=5
+MYDATE=`date +%Y%m%d%H%M%S`
+PROJECT_PATH=`pwd`
+LIST_OF_FILES="FilesToGC/$MYDATE/FilesToGC_$MYDATE.txt"
+BSNM_OF_FILES="FilesToGC/$MYDATE/BSNMsToGC_$MYDATE.txt"
+FNLS_OF_FILES="FilesToGC/$MYDATE/FNLSsToGC_$MYDATE.txt"
+
+mkdir -p FilesToGC/$MYDATE/$MYSRC1
+mkdir -p FilesToGC/$MYDATE/$MYSRC2
+
+echo -e "\nThe script will open a "VI Editor" after your confirmation.
+Input the files to compare with the absolute path.
+
+Once done. save (wq!) it.\n"
+
+read -p "Press 'ENTER KEY' to continue ..."
+
+vi $LIST_OF_FILES
+if [[ ! -s $LIST_OF_FILES ]]; then echo "$LIST_OF_FILES is empty..."; exit 1; fi
+
+SFTP_COMMANDS=$(mktemp)
+while IFS= read -r line; do echo "get $line">>$SFTP_COMMANDS; done<$LIST_OF_FILES
+
+cd $PROJECT_PATH/FilesToGC/$MYDATE/$MYSRC1/
+sftp $MYSRC1 <<EOF
+`cat $SFTP_COMMANDS`
+exit
+EOF
+
+cd $PROJECT_PATH/FilesToGC/$MYDATE/$MYSRC2/
+sftp $MYSRC2 <<EOF
+`cat $SFTP_COMMANDS`
+exit
+EOF
+
+rm "$SFTP_COMMANDS"
+
+#create a basename for the files
+cd $PROJECT_PATH
+while IFS= read -r line; do basename $FILE $line>>$BSNM_OF_FILES; done<$LIST_OF_FILES
+
+#List files successfully transferred
+cd $PROJECT_PATH
+ls FilesToGC/$MYDATE/* | egrep -v "^FilesToGC|^$|BSNMsToGC*.txt|FilesToGC*.txt" | uniq > $FNLS_OF_FILES
+
+#List files failed to transfer
+cd $PROJECT_PATH
+
+# List of files failed to transfer
+echo -e "\n=========================================="
+echo "LIST OF FILES FAILED TO TRANSFER"
+echo -e "==========================================\n"
+
+echo "List files failed to transfer"
+cat $LIST_OF_FILES | egrep -v "`cat $FNLS_OF_FILES | tr "\n" "|" | head -c -2`"
+
+# Comparison of files
+echo -e "\n=========================================="
+echo "COMPARE FILES"
+echo -e "==========================================\n"
+
+for bsnm_fls in `cat $FNLS_OF_FILES`
+do
+	echo "### CHECKSUM OF $bsnm_fls ###"
+	echo "SOURCE1: `cksum FilesToGC/$MYDATE/$MYSRC1/$bsnm_fls | awk '{print $1}'` AND SOURCE2: `cksum FilesToGC/$MYDATE/$MYSRC2/$bsnm_fls | awk '{print $1}'`"
+	echo ""
+	echo "### DIFF OF $bsnm_fls ###"
+	echo "`sdiff -s FilesToGC/$MYDATE/$MYSRC1/$bsnm_fls FilesToGC/$MYDATE/$MYSRC2/$bsnm_fls`"
+	echo ""
+done
+

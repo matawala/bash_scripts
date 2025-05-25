@@ -1,0 +1,7 @@
+/etc/hosts
+/etc/ssh/sshd_config
+/tmp/hosts
+/err/error123
+/err/error456
+/err/error789
+/err/error100

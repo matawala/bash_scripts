@@ -1,0 +1,5 @@
+### redhat01 ###
+Checking Enabled timestamp for all deployments
+
+Failed to connect to the controller: The controller is not available at localhost:9990: java.net.ConnectException: WFLYPRT0053: Could not connect to remote+http://localhost:9990. The connection failed: WFLYPRT0053: Could not connect to remote+http://localhost:9990. The connection failed: Connection refused
+

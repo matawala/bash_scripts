@@ -1,0 +1,8 @@
+/etc/hosts
+/tmp/hosts
+/etc/ssh/sshd_config
+/etc/hostname
+/tmp/failed1.txt
+/tmp/failed2.txt
+/tmp/failed3.txt
+/tmp/failed4.txt
