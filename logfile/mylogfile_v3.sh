@@ -4,7 +4,6 @@
 # 20250525 v1 Tabbed logs
 # 20250525 v2 Use of while to print per line instead of awk needs to complete before append the log file
 # 20250525 v3 Added additional task and added also new lines after/before descriptions
-# 20250525 v4
 
 #MYDATE=`date +%Y%m%d%H%M%S`
 MYDATE=`date +%Y%m%d`

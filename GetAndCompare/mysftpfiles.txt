@@ -1,0 +1,5 @@
+hosts
+fileOnlyExistInHost2
+fileOnlyExistInHost1
+fileBothExistInHost
+fileBothExistInHost

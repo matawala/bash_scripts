@@ -11,11 +11,13 @@
 # [X] V1.7 List all invalid file entries
 # [X] V1.8 Update the code to get invalid file entries and update the output of comparing files
 # [X] V1.9 Archive artifacts
+# [ ] V2.0 Tag the Status of files
 #
 ############################################################################################
 
 clear
 
+echo "192.168.56.10"
 read -p "Enter Source1: " MYSRC1
 read -p "Enter Source2: " MYSRC2
 
