@@ -1,0 +1,80 @@
+2025-05-26 01:49:37 : Start executing Ping
+
+                      PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+                      64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=11.4 ms
+                      64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=33.9 ms
+                      64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=11.7 ms
+                      64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=30.4 ms
+                      
+                      --- 8.8.8.8 ping statistics ---
+                      4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+                      rtt min/avg/max/mdev = 11.407/21.850/33.888/10.349 ms
+
+2025-05-26 01:49:37 : Finished executing Ping
+2025-05-26 01:49:37 : Start listing all the files under /var/log
+
+                      total 6784
+                      -rw-r--r--. 1 root    root                 60 Nov  1  2026 hawkey.log-20261102
+                      -rw-------. 1 root    root               2219 Nov  1  2026 messages-20261101
+                      -rw-------. 1 root    root                417 Jun 14  2026 cron-20261101
+                      -rw-------. 1 root    root                  0 Jun 14  2026 maillog-20261101
+                      -rw-------. 1 root    root                  0 Jun 14  2026 secure-20261101
+                      -rw-------. 1 root    root                  0 Jun 14  2026 spooler-20261101
+                      -rw-------. 1 root    root               2571 Jun 14  2026 messages-20260614
+                      -rw-r--r--. 1 root    root             532440 May 26 00:38 dnf.log
+                      -rw-r--r--. 1 root    root             681211 May 26 00:38 dnf.librepo.log
+                      -rw-r--r--. 1 root    root             224848 May 26 00:38 dnf.rpm.log
+                      -rw-rw-r--. 1 root    utmp            1761928 May 25 22:32 lastlog
+                      -rw-rw-r--. 1 root    utmp              98688 May 25 22:32 wtmp
+                      drwxr-xr-x. 2 root    root               4096 May 25 00:00 rhsm
+                      -rw-------. 1 root    root                  0 May 25 00:00 messages
+                      -rw-------. 1 root    root                  0 May 25 00:00 secure
+                      -rw-------. 1 root    root                  0 May 25 00:00 spooler
+                      -rw-------. 1 root    root                  0 May 25 00:00 cron
+                      -rw-------. 1 root    root                  0 May 25 00:00 maillog
+                      drwx------. 2 root    root                 99 May 23 14:18 audit
+                      drwxr-x---. 2 sssd    sssd                 87 May 20 02:37 sssd
+                      -rw-------. 1 root    root                  0 May 20 02:37 secure-20250525
+                      -rw-------. 1 root    root                  0 May 20 02:37 spooler-20250525
+                      -rw-------. 1 root    root                  0 May 20 02:37 cron-20250525
+                      -rw-------. 1 root    root                  0 May 20 02:37 maillog-20250525
+                      -rw-------. 1 root    root                  0 May 20 02:37 messages-20250525
+                      drwx------. 2 root    root               4096 May 20 02:37 httpd
+                      -rw-r--r--. 1 root    root                  0 May 20 02:37 hawkey.log
+                      -rw-rw----. 1 root    utmp               3456 May 14 21:32 btmp
+                      -rw-r--r--. 1 root    root                180 May 13 08:17 hawkey.log-20250520
+                      -rw-------. 1 root    root                  0 May 11 00:00 cron-20250520
+                      -rw-------. 1 root    root                  0 May 11 00:00 maillog-20250520
+                      -rw-------. 1 root    root                  0 May 11 00:00 messages-20250520
+                      -rw-------. 1 root    root                  0 May 11 00:00 secure-20250520
+                      -rw-------. 1 root    root                  0 May 11 00:00 spooler-20250520
+                      -rw-r--r--. 1 root    root                300 May  9 10:56 hawkey.log-20250511
+                      -rw-rw----. 1 root    utmp               1152 Apr 23 23:44 btmp-20250501
+                      -rw-r--r--. 1 root    root               1920 Apr 21 18:58 hawkey.log-20250422
+                      -rw-r--r--. 1 root    root            1048542 Mar 26 04:34 dnf.log.1
+                      -rw-rw-r--. 1 root    utmp            1077888 Feb 24 16:55 wtmp-20250225
+                      -rw-------. 1 root    root                  0 Feb 16 21:58 cron-20260614
+                      -rw-------. 1 root    root                  0 Feb 16 21:58 maillog-20260614
+                      -rw-------. 1 root    root                  0 Feb 16 21:58 secure-20260614
+                      -rw-------. 1 root    root                  0 Feb 16 21:58 spooler-20260614
+                      drwx------. 3 root    root                 18 Feb 14 17:24 libvirt
+                      drwxr-xr-x. 3 root    root                 21 Feb 14 17:24 swtpm
+                      drwxrwxr-x. 7 pcp     pcp                  75 Feb 14 17:24 pcp
+                      drwx------. 3 radiusd radiusd              21 Feb 14 17:24 radius
+                      drwx------. 3 root    root                 17 Feb 14 17:24 samba
+                      -rw-r--r--. 1 root    root            1009325 Feb 14 17:23 dnf.log.2
+                      -rw-r--r--. 1 root    root            1047931 Nov 23  2024 dnf.log.3
+                      -rw-r--r--. 1 root    root            1048476 Jul 31  2024 dnf.log.4
+                      -rw-r--r--. 1 root    root               2479 Jul 28  2024 datetime.log
+                      -rw-r-----. 1 root    root                481 Jul 22  2024 firewalld
+                      drwxr-sr-x+ 3 root    systemd-journal      46 Jun 25  2024 journal
+                      drwxr-xr-x. 2 root    root                 23 Jun 24  2024 tuned
+                      drwxr-xr-x. 2 root    root               4096 Jun 19  2024 anaconda
+                      drwx------. 2 root    root                  6 Jun 19  2024 private
+                      lrwxrwxrwx. 1 root    root                 39 Jun 19  2024 README -> ../../usr/share/doc/systemd/README.logs
+                      -rw-------. 1 root    root                  0 Jun 19  2024 tallylog
+                      drwxr-xr-x. 2 root    root                  6 Mar 29  2022 pki
+                      drwxr-x---. 2 chrony  chrony                6 Aug 17  2021 chrony
+                      drwx------. 2 root    root                  6 Aug 11  2021 speech-dispatcher
+
+2025-05-26 01:49:37 : Finished listing all files under /var/log
